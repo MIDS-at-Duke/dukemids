@@ -12,8 +12,11 @@ project:
     - title: Professional Advice
       children:
         - file: professional_advice/PhD_Advice.ipynb
+          title: Thinking about a PhD?
         - file: professional_advice/getting_involved_in_research.ipynb
+          title: Thinking about Research?
         - file: professional_advice/mids_electives.md
+          title: MIDS Electives
         - file: professional_advice/public_oriented_data_science.md
         - file: professional_advice/ergonomics_and_adaptive_tech.md
         - file: professional_advice/buying_datascience_computer.ipynb

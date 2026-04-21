@@ -7,7 +7,23 @@ project:
   # keywords: []
   # authors: []
   github: https://github.com/MIDS-at-Duke/dukemids
-  # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
+  toc:
+    - file: README.md
+    - title: Professional Advice
+      children:
+        - file: professional_advice/PhD_Advice.ipynb
+        - file: professional_advice/getting_involved_in_research.ipynb
+        - file: professional_advice/mids_electives.md
+        - file: professional_advice/public_oriented_data_science.md
+        - file: professional_advice/ergonomics_and_adaptive_tech.md
+        - file: professional_advice/buying_datascience_computer.ipynb
+    - title: Data Science Skills
+      children:
+        - file: data_science_skills/backwards_design.ipynb
+        - file: data_science_skills/data_science_memos.md
+        - file: data_science_skills/llms.ipynb
+        - file: data_science_skills/using_llms_well.ipynb
+        - file: data_science_skills/dcc.md
 site:
   template: book-theme
   # options:

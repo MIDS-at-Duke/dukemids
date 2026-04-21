@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="http://localhost:3000/sitemap_style.xsl" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>http://localhost:3000</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/phd-advice</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/getting-involved-in-research</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/mids-electives</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/public-oriented-data-science</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/ergonomics-and-adaptive-tech</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/buying-datascience-computer</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/backwards-design</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/data-science-memos</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/llms</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/using-llms-well</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/dcc</loc>
+  </url>
+</urlset>

@@ -2,7 +2,7 @@
 version: 1
 project:
   id: c0b4453f-ea97-49b9-b476-0a1324bb2eef
-  # title:
+  title: Duke MIDS
   # description:
   # keywords: []
   # authors: []
@@ -26,6 +26,6 @@ project:
         - file: data_science_skills/dcc.md
 site:
   template: book-theme
-  # options:
-  #   favicon: favicon.ico
-  #   logo: site_logo.png
+  options:
+    favicon: mids_logo.svg
+    logo: mids_logo.svg

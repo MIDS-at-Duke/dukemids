@@ -29,3 +29,4 @@ site:
   options:
     favicon: mids_logo.svg
     logo: mids_logo.svg
+    style: style.css

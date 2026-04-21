@@ -5,3 +5,13 @@
 body {
   font-family: 'Fira Sans', sans-serif;
 }
+
+/* Always expand sidebar nav sections */
+.collapsible-content[hidden] {
+  display: block !important;
+}
+
+/* Rotate the arrow icon to match expanded state */
+.myst-toc [data-state="closed"] button svg {
+  transform: rotate(90deg);
+}

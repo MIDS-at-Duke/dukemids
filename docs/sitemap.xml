@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="http://localhost:3004/sitemap_style.xsl" ?>
+<?xml-stylesheet type="text/xsl" href="http://localhost:3005/sitemap_style.xsl" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://localhost:3004</loc>
+    <loc>http://localhost:3005</loc>
   </url>
   <url>
-    <loc>http://localhost:3004/phd-advice</loc>
+    <loc>http://localhost:3005/phd-advice</loc>
   </url>
   <url>
-    <loc>http://localhost:3004/getting-involved-in-research</loc>
+    <loc>http://localhost:3005/getting-involved-in-research</loc>
   </url>
   <url>
-    <loc>http://localhost:3004/mids-electives</loc>
+    <loc>http://localhost:3005/mids-electives</loc>
   </url>
   <url>
-    <loc>http://localhost:3004/public-oriented-data-science</loc>
+    <loc>http://localhost:3005/public-oriented-data-science</loc>
   </url>
   <url>
-    <loc>http://localhost:3004/ergonomics-and-adaptive-tech</loc>
+    <loc>http://localhost:3005/ergonomics-and-adaptive-tech</loc>
   </url>
   <url>
-    <loc>http://localhost:3004/buying-datascience-computer</loc>
+    <loc>http://localhost:3005/buying-datascience-computer</loc>
   </url>
   <url>
-    <loc>http://localhost:3004/backwards-design</loc>
+    <loc>http://localhost:3005/backwards-design</loc>
   </url>
   <url>
-    <loc>http://localhost:3004/data-science-memos</loc>
+    <loc>http://localhost:3005/data-science-memos</loc>
   </url>
   <url>
-    <loc>http://localhost:3004/llms</loc>
+    <loc>http://localhost:3005/llms</loc>
   </url>
   <url>
-    <loc>http://localhost:3004/using-llms-well</loc>
+    <loc>http://localhost:3005/using-llms-well</loc>
   </url>
   <url>
-    <loc>http://localhost:3004/dcc</loc>
+    <loc>http://localhost:3005/dcc</loc>
   </url>
 </urlset>

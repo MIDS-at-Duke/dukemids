@@ -1,0 +1,29 @@
+format: jb-book
+root: index
+parts:
+  - caption: Navigating Duke
+    chapters:
+      - file: professional_advice/PhD_Advice
+        title: Thinking about a PhD?
+      - file: professional_advice/getting_involved_in_research
+        title: Thinking about Research?
+      - file: professional_advice/mids_electives
+        title: MIDS Electives
+      - file: data_science_skills/dcc
+        title: Duke DCC
+
+  - caption: MIDS Deliverables
+    chapters:
+      - file: data_science_skills/backwards_design
+      - file: data_science_skills/data_science_memos
+
+  - caption: Professional Advice
+    chapters:
+      - file: professional_advice/public_oriented_data_science
+        title: Public Interest DS Jobs
+      - file: professional_advice/buying_datascience_computer
+        title: Buying a DS Computer
+      - file: professional_advice/ergonomics_and_adaptive_tech
+        title: Ergonomics & Accessibility
+      - file: data_science_skills/llms
+      - file: data_science_skills/using_llms_well

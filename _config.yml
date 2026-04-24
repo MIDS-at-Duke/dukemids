@@ -1,0 +1,16 @@
+title: Duke MIDS
+author: ""
+logo: mids_logo.svg
+
+repository:
+  url: https://github.com/MIDS-at-Duke/dukemids
+  branch: main
+
+execute:
+  execute_notebooks: "off"
+
+html:
+  favicon: mids_logo.svg
+  use_repository_button: true
+  extra_css:
+    - style.css

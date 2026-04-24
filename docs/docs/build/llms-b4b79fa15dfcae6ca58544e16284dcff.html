@@ -1,0 +1,519 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>chatGPT and You &#8212; Duke MIDS</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'docs/build/llms-b4b79fa15dfcae6ca58544e16284dcff';</script>
+    <link rel="icon" href="../../_static/mids_logo.svg"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/mids_logo.svg" class="logo__image only-light" alt="Duke MIDS - Home"/>
+    <img src="../../_static/mids_logo.svg" class="logo__image only-dark pst-js-only" alt="Duke MIDS - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../index.html">
+                    Duke MIDS Student Resources
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Navigating Duke</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../professional_advice/PhD_Advice.html">Thinking about a PhD?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../professional_advice/getting_involved_in_research.html">Thinking about Research?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../professional_advice/mids_electives.html">MIDS Electives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_science_skills/dcc.html">Duke DCC</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">MIDS Deliverables</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../data_science_skills/backwards_design.html">Backwards Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_science_skills/data_science_memos.html">Data Science Memos</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Professional Advice</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../professional_advice/public_oriented_data_science.html">Public Interest DS Jobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../professional_advice/buying_datascience_computer.html">Buying a DS Computer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../professional_advice/ergonomics_and_adaptive_tech.html">Ergonomics &amp; Accessibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_science_skills/llms.html">chatGPT and You</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_science_skills/using_llms_well.html">Using LLMs Well</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/MIDS-at-Duke/dukemids" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/docs/build/llms-b4b79fa15dfcae6ca58544e16284dcff.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>chatGPT and You</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-catch-22">The Catch-22</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-importance-of-active-learning">The Importance of Active Learning</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ok-but-isn-t-this-just-the-future-calculators-obviated-long-division-after-all">OK, but isn’t this just the future? Calculators obviated long division after all</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reliance-on-llms-is-particularly-dangerous-in-data-science">Reliance on LLMs Is Particularly Dangerous in Data Science</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#so-where-does-that-leave-us">So Where Does That Leave Us?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#be-especially-cautious-of-pro-active-suggestions">Be especially cautious of pro-active suggestions</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="chatgpt-and-you">
+<h1>chatGPT and You<a class="headerlink" href="#chatgpt-and-you" title="Link to this heading">#</a></h1>
+<p>(aka <strong>Congratulations/I’m so sorry</strong>)</p>
+<p><em>This reading is primarily about the use of Large Language Models (LLMs) to write code. There are many similar arguments related to the use of LLMs to write essays and reports, but that is not the focus of this reading.</em></p>
+<p>You are beginning your Data Science education at a remarkable time. Data Science has always been a rapidly evolving field, but even by its own standards, the changes that have taken place over the last year with the emergence of highly capable Large Language Models (LLMs) like chatGPT, Github Copilot, Gemini, etc. are staggering. We are only just beginning to figure out how best to use these tools, and you are perfectly positioned to help shape that future (The “Congratulations!” in the subtitle above).</p>
+<p>But because we are still learning how best to integrate these tools into our lives, I have to warn you that as students, you are also in a uniquely <em>vulnerable</em> position (the “I’m so sorry” subtitle). That’s because while it is clear that LLMs are here to stay, and will inevitably play a critical role in the daily life of the practicing data scientist, there is a significant danger that overreliance on LLMs early in your education may stunt your professional development.</p>
+<section id="the-catch-22">
+<h2>The Catch-22<a class="headerlink" href="#the-catch-22" title="Link to this heading">#</a></h2>
+<p>The problem with LLMs is that when it comes to writing code for real data science work (the kind of stuff you’ll be doing in your advanced courses and in your career), LLMs are error-prone and require substantial supervision. Moreover, there is good reason to think that this is a problem that our current approach to developing LLMs will never be able to overcome. As a result, most practicing data scientists use LLMs like student research assistants—they let the LLMs write the first draft of code, then review and refine the code based on their own expertise. This is <em>extremely</em> useful, but it does mean that to use LLMs effectively, a data scientist still has to learn to program on their own.</p>
+<p>And that’s where the danger lies with LLMs: while LLMs are error-prone when it comes to real-world data science projects, they’re shockingly good at the types of basic programming exercises that are the staple of introductory data science and programming courses. And that can create a temptation to use LLMs extensively in introductory classes, precluding the development of a strong understanding of the principles of programming. That, in turn, means you are likely to be <em>less</em> effective at using LLMs in the longer run.</p>
+</section>
+<section id="the-importance-of-active-learning">
+<h2>The Importance of Active Learning<a class="headerlink" href="#the-importance-of-active-learning" title="Link to this heading">#</a></h2>
+<p>If there is anything that researchers have discovered about learning, it is that to learn something effectively, one must <em>actively</em> engage with the material. Passive lectures—in which a professor stands at the front of a room and talks to students—may be the norm in schools, but empirically they are actually one of the <em>worst</em> ways to teach. It is only by doing activities in which students get to test their understanding of a topic that real learning happens.</p>
+<p>(Ironically, while lectures are not very effective at actually getting students to learn, they <em>are</em> effective at providing students with the <em>illusion of understanding</em>—the false sense that learning has occurred! Here’s <a class="reference external" href="https://news.harvard.edu/gazette/story/2019/09/study-shows-that-students-learn-more-when-taking-part-in-classrooms-that-employ-active-learning-strategies/">one nice illustrative study of this phenomenon</a>)</p>
+<p>And that’s why LLMs are potentially so problematic for students in your position—it’s not enough to do the readings about programming and then turn to an LLM as soon as you feel stuck; real learning requires you to spend time in that frustrated, uncomfortable stuck place trying to figure out what about your understanding of the material is inadequate to allow you to move forward.</p>
+</section>
+<section id="ok-but-isn-t-this-just-the-future-calculators-obviated-long-division-after-all">
+<h2>OK, but isn’t this just the future? Calculators obviated long division after all<a class="headerlink" href="#ok-but-isn-t-this-just-the-future-calculators-obviated-long-division-after-all" title="Link to this heading">#</a></h2>
+<p>Well… no. No, it didn’t. We still teach kids how to do addition, multiplication, and division despite the fact computers and calculators can do it better, after all. Why? Because it helps them to develop <em>number sense</em>, which is a critical foundation for more sophisticated types of quantitative reasoning and advanced mathematics, statistics, etc.</p>
+<p>The same goes for programming—yes, an LLM can easily write a for-loop or a function to find prime numbers, but we aren’t asking you to practice those skills <em>just</em> so you can write a for-loop; we’re asking you to practice those skills to help you develop a comfort with solving problems through algorithmic thinking.</p>
+</section>
+<section id="reliance-on-llms-is-particularly-dangerous-in-data-science">
+<h2>Reliance on LLMs Is Particularly Dangerous in Data Science<a class="headerlink" href="#reliance-on-llms-is-particularly-dangerous-in-data-science" title="Link to this heading">#</a></h2>
+<p>As I mentioned before, part of the reason to not become overly dependent on LLMs early in your education is that it will prevent you from learning the skills you will later need to supervise them when doing more complex work. This is true in all domains of programming, but it’s especially true in Data Science.</p>
+<p>In many contexts—like web design or app development—you can start to evaluate whether an LLM has successfully completed a task by looking at what it created. If an LLM creates a website for you, and the website looks correct and does everything you want it to do, then, well… the LLM did a pretty good job! You wouldn’t want to use this approach to launch a website for a big company—there are lots of corner cases that would be hard for you to verify work by guess-and-check, and it’s hard to verify your site is secure—but it’s at least a start.</p>
+<p>But the same cannot be said for data science. As data scientists, we are in the business of generating new knowledge, which means that we don’t know what the output of our models should look like in advance. Sure, we have some sense of what reasonable outputs look like—an analysis that suggests smoking prevents cancer going to raise a lot of red flags—but the reason that the FDA forces drug companies to run clinical trials before approving drugs and Google runs A/B tests whenever they change how search results are shown is that we don’t know what drugs will work/what users will respond to in advance.</p>
+<p>As a result—unlike in web development or writing app widgets—we can’t evaluate whether an LLM has correctly written the analysis code we asked for by looking at the results. Rather, in data science, our confidence in our conclusions depends almost entirely on our confidence <em>in how our results were generated,</em> and that can only come from reading, testing, <em>and understanding</em> our own code.</p>
+</section>
+<section id="so-where-does-that-leave-us">
+<h2>So Where Does That Leave Us?<a class="headerlink" href="#so-where-does-that-leave-us" title="Link to this heading">#</a></h2>
+<p>As I said at the top of this reading, we’re still learning how best to fit LLMs into our lives. They have clearly emerged as a critical tool in the data scientist’s toolbox, and one I am very confident you will be using regularly by the time you graduate from the MIDS program.</p>
+<p><em>However…</em></p>
+<p>For all the reasons laid out here, I hope you can see why overreliance on LLMs early in your education may be extremely detrimental. Indeed, I’ve had several recent MIDS graduates say to me how glad they are that they learned to program <em>just before</em> these tools became available, not because it means they don’t need LLMs, but because they feel it has set them up to use them <em>effectively</em>.</p>
+<p>In your first year, you may find that different professors have different rules around whether the use of LLMs are allowed. For some classes—like Data Management, where a lot of the “programming” you are doing just entails calling APIs for cloud services, LLMs may prove really helpful. But even where the use of LLMs is allowed by the professor and does not constitute an honor code violation, my strong suggestion is to err on the side of <em>under-using</em> these tools, at least for your first year at Duke.</p>
+<p>If you take Practical Data Science (IDS 720) with me in the fall, we will talk about the use of LLMs, and good ways to use them effectively. We will start the semester without them, then ease into their use later in the semester. And in doing so, we’ll talk about what I think are the best ways to bring them into your code, like as debugging aids, or for template code.</p>
+<section id="be-especially-cautious-of-pro-active-suggestions">
+<h3>Be especially cautious of pro-active suggestions<a class="headerlink" href="#be-especially-cautious-of-pro-active-suggestions" title="Link to this heading">#</a></h3>
+<p>One thing we’ll talk about in 720 but which I’ll also say here is to be <em>especially</em> cautious of pro-active AI suggestions. I absolutely hate the AI code completion tools that pop up a code completion suggestion in gray because they hijack your train of thought without you having decided you want them involved. <em>Please</em> disable / don’t activate in-line code completion tools anywhere you see them — AI shouldn’t be deciding when and how to be involved, it should work for you when you decide it’s appropriate.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./docs/build"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-catch-22">The Catch-22</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-importance-of-active-learning">The Importance of Active Learning</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ok-but-isn-t-this-just-the-future-calculators-obviated-long-division-after-all">OK, but isn’t this just the future? Calculators obviated long division after all</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reliance-on-llms-is-particularly-dangerous-in-data-science">Reliance on LLMs Is Particularly Dangerous in Data Science</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#so-where-does-that-leave-us">So Where Does That Leave Us?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#be-especially-cautious-of-pro-active-suggestions">Be especially cautious of pro-active suggestions</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

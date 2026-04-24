@@ -1,35 +1,494 @@
-<!DOCTYPE html><html lang="en" class="" style="scroll-padding:60px"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Duke MIDS</title><meta property="og:title" content="Duke MIDS"/><meta name="generator" content="mystmd"/><meta name="keywords" content=""/><link rel="stylesheet" href="/build/_assets/app-4VJOMIDD.css"/><link rel="stylesheet" href="/build/_assets/thebe-core-VKVHG5VY.css"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jupyter-matplotlib@0.11.3/css/mpl_widget.css"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" crossorigin="anonymous"/><link rel="icon" href="/favicon.ico"/><link rel="stylesheet" href="/myst-theme.css"/><script>
-  const savedTheme = localStorage.getItem("myst:theme");
-  const theme = window.matchMedia("(prefers-color-scheme: light)").matches ? 'light' : 'dark';
-  const classes = document.documentElement.classList;
-  const hasAnyTheme = classes.contains('light') || classes.contains('dark');
-  if (!hasAnyTheme) classes.add(savedTheme ?? theme);
-</script></head><body class="m-0 transition-colors duration-500 bg-white dark:bg-stone-900"><div class="myst-skip-to-article fixed top-1 left-1 h-[0px] w-[0px] focus-within:z-40 focus-within:h-auto focus-within:w-auto bg-white overflow-hidden focus-within:p-2 focus-within:ring-1" aria-label="skip to content options"><a href="#skip-to-frontmatter" class="myst-skip-to-link block px-2 py-1 text-black underline">Skip to article frontmatter</a><a href="#skip-to-article" class="myst-skip-to-link block px-2 py-1 text-black underline">Skip to article content</a></div><dialog id="myst-no-css" style="position:fixed;left:0px;top:0px;width:100%;height:100vh;font-size:4rem;padding:1rem;color:black;background:white"><strong>Site not loading correctly?</strong><p>This may be due to an incorrect <code>BASE_URL</code> configuration. See<!-- --> <a href="https://mystmd.org/guide/deployment#deploy-base-url">the MyST Documentation</a> <!-- -->for reference.</p><script>
-    (() => {
-            // Test for has-styling variable set by the MyST stylesheet
-            const node = document.currentScript.parentNode;
-            const hasCSS = window.getComputedStyle(node).getPropertyValue("--has-styling");
-            if (hasCSS === ""){
-                    node.showModal();
-            }
 
-    })()
-</script></dialog><div class="myst-top-nav bg-white/80 backdrop-blur dark:bg-stone-900/80 shadow dark:shadow-stone-700 p-3 md:px-8 sticky w-full top-0 z-30 h-[60px]"><nav class="myst-top-nav-bar flex items-center justify-between flex-nowrap max-w-[1440px] mx-auto"><div class="flex flex-row xl:min-w-[19.5rem] mr-2 sm:mr-7 justify-start items-center shrink-0"><div class="block xl:hidden"><button class="myst-top-nav-menu-button flex items-center justify-center border-stone-400 text-stone-800 hover:text-stone-900 dark:text-stone-200 hover:dark:text-stone-100 w-10 h-10"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" width="1.5rem" height="1.5rem"><path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd"></path></svg><span class="sr-only">Open Menu</span></button></div><a class="myst-home-link flex items-center ml-3 dark:text-white w-fit md:ml-5 xl:ml-7" href="/"><div class="myst-home-link-logo mr-3 flex items-center dark:bg-white dark:rounded px-1"><img src="/build/mids_logo-dbc684e95f60d1f4739f78fb3f01105c.svg" class="h-9" height="2.25rem"/></div><span class="text-md sm:text-xl tracking-tight sm:mr-5 sr-only">Made with MyST</span></a></div><div class="flex items-center flex-grow w-auto"><div class="flex-grow hidden text-md lg:block"></div><div class="flex-grow block"></div><button type="button" aria-haspopup="dialog" aria-expanded="false" data-state="closed" class="myst-search-bar flex items-center h-10 aspect-square sm:w-64 text-left text-gray-600 dark:text-gray-300 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-700 myst-search-bar-disabled hover:ring-blue-500 dark:hover:ring-blue-500 hover:border-blue-500 dark:hover:border-blue-500"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="p-2.5 h-10 w-10 aspect-square"><path fill-rule="evenodd" d="M10.5 3.75a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5ZM2.25 10.5a8.25 8.25 0 1 1 14.59 5.28l4.69 4.69a.75.75 0 1 1-1.06 1.06l-4.69-4.69A8.25 8.25 0 0 1 2.25 10.5Z" clip-rule="evenodd"></path></svg><span class="myst-search-text-placeholder hidden sm:block grow">Search</span><div aria-hidden="true" class="myst-search-shortcut items-center hidden mx-1 font-mono text-sm text-gray-600 dark:text-gray-300 sm:flex gap-x-1"><kbd class="px-2 py-1 border border-gray-300 dark:border-gray-600 rounded-md shadow-[0px_2px_0px_0px_rgba(0,0,0,0.08)] dark:shadow-none hide-mac">CTRL</kbd><kbd class="px-2 py-1 border border-gray-300 dark:border-gray-600 rounded-md shadow-[0px_2px_0px_0px_rgba(0,0,0,0.08)] dark:shadow-none show-mac">⌘</kbd><kbd class="px-2 py-1 border border-gray-300 dark:border-gray-600 rounded-md shadow-[0px_2px_0px_0px_rgba(0,0,0,0.08)] dark:shadow-none ">K</kbd><script>
-;(() => {
-const script = document.currentScript;
-const root = script.parentElement;
+<!DOCTYPE html>
 
-const isMac = /mac/i.test(
-      window.navigator.userAgentData?.platform ?? window.navigator.userAgent,
-    );
-root.querySelectorAll(".hide-mac").forEach(node => {node.classList.add(isMac ? "hidden" : "block")});
-root.querySelectorAll(".show-mac").forEach(node => {node.classList.add(!isMac ? "hidden" : "block")});
-})()</script></div></button><button class="myst-theme-button theme rounded-full aspect-square border border-stone-700 dark:border-white hover:bg-neutral-100 border-solid overflow-hidden text-stone-700 dark:text-white hover:text-stone-500 dark:hover:text-neutral-800 w-10 h-10 ml-3" title="Toggle theme between light and dark mode" aria-label="Toggle theme between light and dark mode"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="myst-theme-moon-icon h-full w-full p-0.5 hidden dark:block"><path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 0 1 .162.819A8.97 8.97 0 0 0 9 6a9 9 0 0 0 9 9 8.97 8.97 0 0 0 3.463-.69.75.75 0 0 1 .981.98 10.503 10.503 0 0 1-9.694 6.46c-5.799 0-10.5-4.7-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 0 1 .818.162Z" clip-rule="evenodd"></path></svg><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="myst-theme-sun-icon h-full w-full p-0.5 dark:hidden"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"></path></svg></button><div class="block sm:hidden"></div><div class="hidden sm:block"></div></div></nav></div><div class="myst-primary-sidebar fixed xl:article-grid grid-gap xl:w-full xl:pointer-events-none overflow-auto max-xl:w-[75vw] max-xl:max-w-[350px] max-xl:!top-0 max-xl:h-screen hidden z-10" style="top:60px"><div class="myst-primary-sidebar-pointer pointer-events-auto xl:col-margin-left flex-col overflow-hidden max-xl:h-full hidden xl:flex"><div class="myst-primary-sidebar-nav flex-grow py-6 overflow-y-auto primary-scrollbar"><nav aria-label="Navigation" class="myst-primary-sidebar-topnav overflow-y-hidden transition-opacity lg:hidden ml-3 xl:ml-0 mr-3 max-w-[350px]"><div class="w-full px-1 dark:text-white font-medium"></div></nav><div class="my-3 border-b-2 lg:hidden"></div><nav aria-label="Table of Contents" class="myst-primary-sidebar-toc flex-grow overflow-y-hidden transition-opacity ml-3 xl:ml-0 mr-3 max-w-[350px]"><div class="myst-toc w-full px-1 dark:text-white"><a title="Duke MIDS" aria-current="page" class="block break-words focus:outline outline-blue-200 outline-2 rounded myst-toc-item p-2 my-1 rounded-lg hover:bg-slate-300/30 font-bold active" href="/">Duke MIDS</a><div data-state="closed" class="w-full"><div class="myst-toc-item flex flex-row w-full gap-2 pl-2 my-1 text-left rounded-lg outline-none hover:bg-slate-300/30"><div title="Professional Advice" class="block break-words rounded py-2 grow cursor-pointer">Professional Advice</div><button class="self-stretch flex items-center flex-none px-1 rounded-l-md group hover:bg-slate-300/30 focus-visible:outline outline-blue-200 outline-2" aria-label="Open Folder" type="button" aria-controls="radix-:R18psp:" aria-expanded="false" data-state="closed"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="transition-transform duration-300 group-data-[state=open]:rotate-90 text-text-slate-700 dark:text-slate-100" height="1.5rem" width="1.5rem"><path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd"></path></svg></button></div><div data-state="closed" id="radix-:R18psp:" hidden="" class="pl-3 pr-[2px] collapsible-content"></div></div><div data-state="closed" class="w-full"><div class="myst-toc-item flex flex-row w-full gap-2 pl-2 my-1 text-left rounded-lg outline-none hover:bg-slate-300/30"><div title="Data Science Skills" class="block break-words rounded py-2 grow cursor-pointer">Data Science Skills</div><button class="self-stretch flex items-center flex-none px-1 rounded-l-md group hover:bg-slate-300/30 focus-visible:outline outline-blue-200 outline-2" aria-label="Open Folder" type="button" aria-controls="radix-:R1opsp:" aria-expanded="false" data-state="closed"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="transition-transform duration-300 group-data-[state=open]:rotate-90 text-text-slate-700 dark:text-slate-100" height="1.5rem" width="1.5rem"><path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd"></path></svg></button></div><div data-state="closed" id="radix-:R1opsp:" hidden="" class="pl-3 pr-[2px] collapsible-content"></div></div></div></nav></div><div class="myst-primary-sidebar-footer flex-none py-6 transition-all duration-700 translate-y-6 opacity-0 ml-3 xl:ml-0 mr-3 max-w-[350px]"><a class="myst-made-with-myst flex mx-auto text-gray-700 w-fit hover:text-blue-700 dark:text-gray-200 dark:hover:text-blue-400" href="https://mystmd.org/made-with-myst" target="_blank" rel="noreferrer"><svg style="width:24px;height:24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" stroke="none"><g id="icon"><path fill="currentColor" d="M23.8,54.8v-3.6l4.7-0.8V17.5l-4.7-0.8V13H36l13.4,31.7h0.2l13-31.7h12.6v3.6l-4.7,0.8v32.9l4.7,0.8v3.6h-15
-          v-3.6l4.9-0.8V20.8H65L51.4,53.3h-3.8l-14-32.5h-0.1l0.2,17.4v12.1l5,0.8v3.6H23.8z"></path><path fill="#F37726" d="M47,86.9c0-5.9-3.4-8.8-10.1-8.8h-8.4c-5.2,0-9.4-1.3-12.5-3.8c-3.1-2.5-5.4-6.2-6.8-11l4.8-1.6
-          c1.8,5.6,6.4,8.6,13.8,8.8h9.2c6.4,0,10.8,2.5,13.1,7.5c2.3-5,6.7-7.5,13.1-7.5h8.4c7.8,0,12.7-2.9,14.6-8.7l4.8,1.6
-          c-1.4,4.9-3.6,8.6-6.8,11.1c-3.1,2.5-7.3,3.7-12.4,3.8H63c-6.7,0-10,2.9-10,8.8"></path></g></svg><span class="self-center ml-2 text-sm">Made with MyST</span></a></div></div></div><main class="article-grid grid-gap"><article class="article-grid subgrid-gap col-screen article content"><div class="hidden"></div><div id="skip-to-frontmatter" aria-label="article frontmatter" class="myst-fm-block mb-8 pt-9"><div class="myst-fm-block-header flex items-center mb-5 h-6 text-sm font-light"><div class="flex-grow"></div><div class="myst-fm-block-badges"><a href="https://github.com/MIDS-at-Duke/dukemids" title="GitHub Repository: MIDS-at-Duke/dukemids" target="_blank" rel="noopener noreferrer" class="myst-fm-github-link text-inherit hover:text-inherit"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="1.25rem" height="1.25rem" class="myst-fm-github-icon inline-block mr-1 opacity-60 hover:opacity-100"><path d="M12 2.5c-5.4 0-9.8 4.4-9.8 9.7 0 4.3 2.8 8 6.7 9.2.5.1.7-.2.7-.5v-1.8c-2.4.5-3.1-.6-3.3-1.1-.1-.3-.6-1.1-1-1.4-.3-.2-.8-.6 0-.6s1.3.7 1.5 1c.9 1.5 2.3 1.1 2.8.8.1-.6.3-1.1.6-1.3-2.2-.2-4.4-1.1-4.4-4.8 0-1.1.4-1.9 1-2.6-.1-.2-.4-1.2.1-2.6 0 0 .8-.3 2.7 1 .8-.2 1.6-.3 2.4-.3.8 0 1.7.1 2.4.3 1.9-1.3 2.7-1 2.7-1 .5 1.3.2 2.3.1 2.6.6.7 1 1.5 1 2.6 0 3.7-2.3 4.6-4.4 4.8.4.3.7.9.7 1.8V21c0 .3.2.6.7.5 3.9-1.3 6.6-4.9 6.6-9.2 0-5.4-4.4-9.8-9.8-9.8z"></path></svg></a></div><a href="https://github.com/MIDS-at-Duke/dukemids/edit/main/index.md" title="Edit This Page" target="_blank" rel="noopener noreferrer" class="myst-fm-edit-link text-inherit hover:text-inherit"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" width="1.25rem" height="1.25rem" class="myst-fm-edit-icon inline-block mr-1 opacity-60 hover:opacity-100"><path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10"></path></svg></a><div class="myst-fm-downloads-dropdown relative flex inline-block mx-1 grow-0" data-headlessui-state=""><button class="myst-fm-downloads-button relative ml-2 -mr-1" id="headlessui-menu-button-:Rs8ucp:" type="button" aria-haspopup="menu" aria-expanded="false" data-headlessui-state=""><span class="sr-only">Downloads</span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" width="1.25rem" height="1.25rem" class="myst-fm-downloads-icon"><title>Download</title><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"></path></svg></button></div></div><h1 class="myst-fm-block-title mb-0">Duke MIDS Student Resources</h1></div><div class="block my-10 lg:sticky lg:z-10 lg:h-0 lg:pt-0 lg:my-0 lg:ml-10 lg:col-margin-right" style="top:60px"><nav></nav></div><div id="skip-to-article"></div><aside class="myst-admonition myst-admonition-important my-5 shadow-md dark:shadow-2xl dark:shadow-neutral-900 bg-gray-50/10 dark:bg-stone-800 overflow-hidden myst-admonition-default rounded border-l-4 border-blue-500 important"><div class="myst-admonition-header m-0 font-medium py-1 flex min-w-0 text-lg text-blue-600 bg-blue-50 dark:bg-slate-900"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" width="2rem" height="2rem" class="myst-admonition-header-icon inline-block pl-2 mr-2 self-center flex-none text-blue-600"><path fill-rule="evenodd" d="M14.615 1.595a.75.75 0 0 1 .359.852L12.982 9.75h7.268a.75.75 0 0 1 .548 1.262l-10.5 11.25a.75.75 0 0 1-1.272-.71l1.992-7.302H3.75a.75.75 0 0 1-.548-1.262l10.5-11.25a.75.75 0 0 1 .913-.143Z" clip-rule="evenodd"></path></svg><div class="myst-admonition-header-text text-neutral-900 dark:text-white grow self-center overflow-hidden break-words">This site is intended for current Duke MIDS students.</div></div><div class="myst-admonition-body px-4 py-1"><p>If you are a prospective student or are looking for general information about the Duke Master in Interdisciplinary Data Science program, please visit <strong><a target="_blank" rel="noreferrer" href="https://datascience.duke.edu" class="link whitespace-nowrap"><span class="link-text whitespace-normal">datascience<wbr/>.duke<wbr/>.edu</span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="link-icon"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"></path></svg></a></strong>.</p></div></aside><hr class="py-2 my-5 translate-y-2"/><p>Data science is an applied field, but graduate programs often focus on methods and theory while leaving students to discover on their own the practical skills, professional habits, and career wisdom that make a real difference. This site collects that hard-won knowledge in one place.</p><hr class="py-2 my-5 translate-y-2"/><div class="myst-grid grid my-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4"><div class="myst-card my-5 rounded shadow dark:shadow-neutral-800 overflow-hidden border border-gray-100 dark:border-gray-800 flex flex-col"><div class="myst-card-body flex-grow px-4 py-2"><div class="myst-card-title pt-3 font-bold group-hover:underline">🎓 Professional Advice</div><p>Career guidance, the PhD path, research opportunities, elective recommendations, and practical tips for taking care of yourself along the way.</p></div><footer class="myst-card-footer py-1 pl-3 m-0 border-t border-gray-100 bg-gray-50 dark:bg-slate-900 dark:border-gray-800"><p><a class="link" href="/phd-advice">Explore</a></p></footer></div><div class="myst-card my-5 rounded shadow dark:shadow-neutral-800 overflow-hidden border border-gray-100 dark:border-gray-800 flex flex-col"><div class="myst-card-body flex-grow px-4 py-2"><div class="myst-card-title pt-3 font-bold group-hover:underline">🛠 Data Science Skills</div><p>Practical skills for working data scientists: how to design a project, communicate findings, work effectively with LLMs, and use Duke’s computing resources.</p></div><footer class="myst-card-footer py-1 pl-3 m-0 border-t border-gray-100 bg-gray-50 dark:bg-slate-900 dark:border-gray-800"><p><a class="link" href="/backwards-design">Explore</a></p></footer></div></div><hr class="py-2 my-5 translate-y-2"/><p><em>Questions or suggestions? Reach out to <a target="_blank" rel="noreferrer" href="mailto:nick@nickeubank.com" class="link whitespace-nowrap"><span class="link-text whitespace-normal">nick@nickeubank.com</span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="link-icon"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"></path></svg></a> or open an issue on <a target="_blank" rel="noreferrer" href="https://github.com/MIDS-at-Duke/dukemids" class="link whitespace-nowrap"><span class="link-text whitespace-normal">GitHub</span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="link-icon"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"></path></svg></a>.</em></p><div class="myst-backmatter-parts"></div><div class="myst-footer-links flex pt-10 mb-10 space-x-4"><a class="myst-footer-link flex-1 block p-4 font-normal text-gray-600 no-underline border border-gray-200 rounded shadow-sm group hover:border-blue-600 dark:hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 dark:text-gray-100 dark:border-gray-500 hover:shadow-lg dark:shadow-neutral-700 myst-footer-link-next" aria-label="Next: Thinking about a PhD?" href="/phd-advice"><div class="flex h-full align-middle"><div class="flex-grow"><div class="myst-footer-link-group text-xs text-gray-500 dark:text-gray-400">Professional Advice</div>Thinking about a PhD?</div><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" width="1.5rem" height="1.5rem" class="myst-footer-link-icon self-center transition-transform group-hover:translate-x-1 shrink-0"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"></path></svg></div></a></div></article></main><script>((a,l)=>{if(!window.history.state||!window.history.state.key){let u=Math.random().toString(32).slice(2);window.history.replaceState({key:u},"")}try{let d=JSON.parse(sessionStorage.getItem(a)||"{}")[l||window.history.state.key];typeof d=="number"&&window.scrollTo(0,d)}catch(u){console.error(u),sessionStorage.removeItem(a)}})("positions", null)</script><link rel="modulepreload" href="/build/entry.client-PCJPW7TK.js"/><link rel="modulepreload" href="/build/_shared/chunk-AQ2CODAG.js"/><link rel="modulepreload" href="/build/_shared/chunk-JJXTQVMA.js"/><link rel="modulepreload" href="/build/_shared/chunk-OZE3FFNP.js"/><link rel="modulepreload" href="/build/_shared/chunk-GY5WLDME.js"/><link rel="modulepreload" href="/build/_shared/chunk-C4DFGG5C.js"/><link rel="modulepreload" href="/build/_shared/chunk-J7TUH54J.js"/><link rel="modulepreload" href="/build/_shared/chunk-FZ2S7OYD.js"/><link rel="modulepreload" href="/build/_shared/chunk-JEM6JXYA.js"/><link rel="modulepreload" href="/build/_shared/chunk-34XIY2DH.js"/><link rel="modulepreload" href="/build/_shared/chunk-KQM5FBHR.js"/><link rel="modulepreload" href="/build/_shared/chunk-OCWQY3HK.js"/><link rel="modulepreload" href="/build/_shared/chunk-7HNKBP4B.js"/><link rel="modulepreload" href="/build/_shared/chunk-CUKUDK3R.js"/><link rel="modulepreload" href="/build/_shared/chunk-3EBOCCHJ.js"/><link rel="modulepreload" href="/build/_shared/chunk-O4VQNZ62.js"/><link rel="modulepreload" href="/build/_shared/chunk-4OEDG4JQ.js"/><link rel="modulepreload" href="/build/_shared/chunk-GUCIBHGO.js"/><link rel="modulepreload" href="/build/root-RXQ7EK42.js"/><link rel="modulepreload" href="/build/_shared/chunk-MG6QZF7H.js"/><link rel="modulepreload" href="/build/routes/_index-4AIAQW4G.js"/><script>window.__remixContext = {"url":"/","state":{"loaderData":{"root":{"config":{"version":3,"myst":"1.8.3","options":{"favicon":"/build/mids_logo-dbc684e95f60d1f4739f78fb3f01105c.svg","logo":"/build/mids_logo-dbc684e95f60d1f4739f78fb3f01105c.svg","style":"/build/style-1336cb147c837a271368ed3b6dc2b423.css"},"nav":[],"actions":[],"projects":[{"title":"Duke MIDS","github":"https://github.com/MIDS-at-Duke/dukemids","id":"c0b4453f-ea97-49b9-b476-0a1324bb2eef","toc":[{"file":"index.md"},{"children":[{"file":"professional_advice/PhD_Advice.ipynb","title":"Thinking about a PhD?"},{"file":"professional_advice/getting_involved_in_research.ipynb","title":"Thinking about Research?"},{"file":"professional_advice/mids_electives.md","title":"MIDS Electives"},{"file":"professional_advice/public_oriented_data_science.md"},{"file":"professional_advice/ergonomics_and_adaptive_tech.md"},{"file":"professional_advice/buying_datascience_computer.ipynb"}],"title":"Professional Advice"},{"children":[{"file":"data_science_skills/backwards_design.ipynb"},{"file":"data_science_skills/data_science_memos.md"},{"file":"data_science_skills/llms.ipynb"},{"file":"data_science_skills/using_llms_well.ipynb"},{"file":"data_science_skills/dcc.md"}],"title":"Data Science Skills"}],"exports":[],"bibliography":[],"index":"index","pages":[{"level":1,"title":"Professional Advice"},{"slug":"phd-advice","title":"So You’re Thinking About a PhD","short_title":"Thinking about a PhD?","description":"","date":"","thumbnail":"","thumbnailOptimized":"","banner":"","bannerOptimized":"","tags":[],"level":2},{"slug":"getting-involved-in-research","title":"So You Want To Get Involved In Research?","short_title":"Thinking about Research?","description":"","date":"","thumbnail":"","thumbnailOptimized":"","banner":"","bannerOptimized":"","tags":[],"level":2},{"slug":"mids-electives","title":"MIDS Elective Suggestions","short_title":"MIDS Electives","description":"","date":"","thumbnail":"","thumbnailOptimized":"","banner":"","bannerOptimized":"","tags":[],"level":2},{"slug":"public-oriented-data-science","title":"Public-Interest Data Science Jobs","description":"","date":"","thumbnail":"","thumbnailOptimized":"","banner":"","bannerOptimized":"","tags":[],"level":2},{"slug":"ergonomics-and-adaptive-tech","title":"Ergonomics and Disability Accommodations for Programming","description":"","date":"","thumbnail":"","thumbnailOptimized":"","banner":"","bannerOptimized":"","tags":[],"level":2},{"slug":"buying-datascience-computer","title":"Advice on Buying Computers for Data Science Students","description":"","date":"","thumbnail":"","thumbnailOptimized":"","banner":"","bannerOptimized":"","tags":[],"level":2},{"level":1,"title":"Data Science Skills"},{"slug":"backwards-design","title":"Backwards Design","description":"","date":"","thumbnail":"","thumbnailOptimized":"","banner":"","bannerOptimized":"","tags":[],"level":2},{"slug":"data-science-memos","title":"Data Science Memos","description":"","date":"","thumbnail":"","thumbnailOptimized":"","banner":"","bannerOptimized":"","tags":[],"level":2},{"slug":"llms","title":"chatGPT and You","description":"","date":"","thumbnail":"","thumbnailOptimized":"","banner":"","bannerOptimized":"","tags":[],"level":2},{"slug":"using-llms-well","title":"Using LLMs Well","description":"","date":"","thumbnail":"/build/copilot_chat_window-90d9d55ca13baa8ad3fe2a68151eac0e.png","thumbnailOptimized":"","banner":"","bannerOptimized":"","tags":[],"level":2},{"slug":"dcc","title":"DCC stuff","description":"","date":"","thumbnail":"","thumbnailOptimized":"","banner":"","bannerOptimized":"","tags":[],"level":2}]}]},"CONTENT_CDN_PORT":"3100","MODE":"static"},"routes/_index":{"config":{"version":3,"myst":"1.8.3","options":{"favicon":"/build/mids_logo-dbc684e95f60d1f4739f78fb3f01105c.svg","logo":"/build/mids_logo-dbc684e95f60d1f4739f78fb3f01105c.svg","style":"/build/style-1336cb147c837a271368ed3b6dc2b423.css"},"nav":[],"actions":[],"projects":[{"title":"Duke MIDS","github":"https://github.com/MIDS-at-Duke/dukemids","id":"c0b4453f-ea97-49b9-b476-0a1324bb2eef","toc":[{"file":"index.md"},{"children":[{"file":"professional_advice/PhD_Advice.ipynb","title":"Thinking about a PhD?"},{"file":"professional_advice/getting_involved_in_research.ipynb","title":"Thinking about Research?"},{"file":"professional_advice/mids_electives.md","title":"MIDS Electives"},{"file":"professional_advice/public_oriented_data_science.md"},{"file":"professional_advice/ergonomics_and_adaptive_tech.md"},{"file":"professional_advice/buying_datascience_computer.ipynb"}],"title":"Professional Advice"},{"children":[{"file":"data_science_skills/backwards_design.ipynb"},{"file":"data_science_skills/data_science_memos.md"},{"file":"data_science_skills/llms.ipynb"},{"file":"data_science_skills/using_llms_well.ipynb"},{"file":"data_science_skills/dcc.md"}],"title":"Data Science Skills"}],"exports":[],"bibliography":[],"index":"index","pages":[{"level":1,"title":"Professional Advice"},{"slug":"phd-advice","title":"So You’re Thinking About a PhD","short_title":"Thinking about a PhD?","description":"","date":"","thumbnail":"","thumbnailOptimized":"","banner":"","bannerOptimized":"","tags":[],"level":2},{"slug":"getting-involved-in-research","title":"So You Want To Get Involved In Research?","short_title":"Thinking about Research?","description":"","date":"","thumbnail":"","thumbnailOptimized":"","banner":"","bannerOptimized":"","tags":[],"level":2},{"slug":"mids-electives","title":"MIDS Elective Suggestions","short_title":"MIDS Electives","description":"","date":"","thumbnail":"","thumbnailOptimized":"","banner":"","bannerOptimized":"","tags":[],"level":2},{"slug":"public-oriented-data-science","title":"Public-Interest Data Science Jobs","description":"","date":"","thumbnail":"","thumbnailOptimized":"","banner":"","bannerOptimized":"","tags":[],"level":2},{"slug":"ergonomics-and-adaptive-tech","title":"Ergonomics and Disability Accommodations for Programming","description":"","date":"","thumbnail":"","thumbnailOptimized":"","banner":"","bannerOptimized":"","tags":[],"level":2},{"slug":"buying-datascience-computer","title":"Advice on Buying Computers for Data Science Students","description":"","date":"","thumbnail":"","thumbnailOptimized":"","banner":"","bannerOptimized":"","tags":[],"level":2},{"level":1,"title":"Data Science Skills"},{"slug":"backwards-design","title":"Backwards Design","description":"","date":"","thumbnail":"","thumbnailOptimized":"","banner":"","bannerOptimized":"","tags":[],"level":2},{"slug":"data-science-memos","title":"Data Science Memos","description":"","date":"","thumbnail":"","thumbnailOptimized":"","banner":"","bannerOptimized":"","tags":[],"level":2},{"slug":"llms","title":"chatGPT and You","description":"","date":"","thumbnail":"","thumbnailOptimized":"","banner":"","bannerOptimized":"","tags":[],"level":2},{"slug":"using-llms-well","title":"Using LLMs Well","description":"","date":"","thumbnail":"/build/copilot_chat_window-90d9d55ca13baa8ad3fe2a68151eac0e.png","thumbnailOptimized":"","banner":"","bannerOptimized":"","tags":[],"level":2},{"slug":"dcc","title":"DCC stuff","description":"","date":"","thumbnail":"","thumbnailOptimized":"","banner":"","bannerOptimized":"","tags":[],"level":2}]}]},"page":{"version":3,"kind":"Article","sha256":"1a077077c44324b5e7c6d77adad581d10ac39d3c0d374b8df5bb09fe71303fb7","slug":"index","location":"/index.md","dependencies":[],"frontmatter":{"title":"Duke MIDS Student Resources","content_includes_title":false,"github":"https://github.com/MIDS-at-Duke/dukemids","source_url":"https://github.com/MIDS-at-Duke/dukemids/blob/main/index.md","edit_url":"https://github.com/MIDS-at-Duke/dukemids/edit/main/index.md","exports":[{"format":"md","filename":"index.md","url":"/build/index-69a57a1a67482f6873c7802dba0f4a6a.md"}]},"mdast":{"type":"root","children":[{"type":"block","children":[{"type":"admonition","children":[{"type":"admonitionTitle","children":[{"type":"text","value":"This site is intended for current Duke MIDS students.","position":{"start":{"line":3,"column":1},"end":{"line":3,"column":1}},"key":"OSDDrUnvcG"}],"key":"TUYiFPXpof"},{"type":"paragraph","position":{"start":{"line":6,"column":1},"end":{"line":6,"column":1}},"children":[{"type":"text","value":"If you are a prospective student or are looking for general information about the Duke Master in Interdisciplinary Data Science program, please visit ","position":{"start":{"line":6,"column":1},"end":{"line":6,"column":1}},"key":"MxoLg6rI56"},{"type":"strong","position":{"start":{"line":6,"column":1},"end":{"line":6,"column":1}},"children":[{"type":"link","url":"https://datascience.duke.edu","position":{"start":{"line":6,"column":1},"end":{"line":6,"column":1}},"children":[{"type":"text","value":"datascience​.duke​.edu","position":{"start":{"line":6,"column":1},"end":{"line":6,"column":1}},"key":"nrOWLeiqg6"}],"urlSource":"https://datascience.duke.edu","key":"v7w82udWoX"}],"key":"WgzuSV3G35"},{"type":"text","value":".","position":{"start":{"line":6,"column":1},"end":{"line":6,"column":1}},"key":"ivsPGFm6AT"}],"key":"dMWDIrTheR"}],"class":"important","key":"IdY3sLyxyK"},{"type":"thematicBreak","position":{"start":{"line":10,"column":1},"end":{"line":10,"column":1}},"key":"FUmZ2OGrac"},{"type":"paragraph","position":{"start":{"line":12,"column":1},"end":{"line":12,"column":1}},"children":[{"type":"text","value":"Data science is an applied field, but graduate programs often focus on methods and theory while leaving students to discover on their own the practical skills, professional habits, and career wisdom that make a real difference. This site collects that hard-won knowledge in one place.","position":{"start":{"line":12,"column":1},"end":{"line":12,"column":1}},"key":"C0ObiT2kRV"}],"key":"vnfcKRLHau"},{"type":"thematicBreak","position":{"start":{"line":14,"column":1},"end":{"line":14,"column":1}},"key":"VLob4mQPYC"},{"type":"grid","columns":[1,2,2,2],"children":[{"type":"card","children":[{"type":"cardTitle","children":[{"type":"text","value":"🎓 Professional Advice","position":{"start":{"line":19,"column":1},"end":{"line":19,"column":1}},"key":"qcP91wEI1k"}],"key":"wGDcqhNpnV"},{"type":"paragraph","position":{"start":{"line":20,"column":1},"end":{"line":20,"column":1}},"children":[{"type":"text","value":"Career guidance, the PhD path, research opportunities, elective recommendations, and practical tips for taking care of yourself along the way.","position":{"start":{"line":20,"column":1},"end":{"line":20,"column":1}},"key":"UgeSQl4rAi"}],"key":"ORQ6avgyq2"},{"type":"footer","children":[{"type":"paragraph","position":{"start":{"line":23,"column":1},"end":{"line":23,"column":1}},"children":[{"type":"link","url":"/phd-advice","children":[{"type":"text","value":"Explore","key":"wzcQgIIPRR"}],"urlSource":"professional_advice/PhD_Advice","dataUrl":"/phd-advice.json","internal":true,"protocol":"file","key":"k4cQn2WYK3"}],"key":"IZtck3NBBF"}],"key":"DKDE7tZ01q"}],"key":"jw3GDO8mbS"},{"type":"card","children":[{"type":"cardTitle","children":[{"type":"text","value":"🛠 Data Science Skills","position":{"start":{"line":26,"column":1},"end":{"line":26,"column":1}},"key":"Imi5oHQ96p"}],"key":"k11po74ZJ4"},{"type":"paragraph","position":{"start":{"line":27,"column":1},"end":{"line":27,"column":1}},"children":[{"type":"text","value":"Practical skills for working data scientists: how to design a project, communicate findings, work effectively with LLMs, and use Duke’s computing resources.","position":{"start":{"line":27,"column":1},"end":{"line":27,"column":1}},"key":"Cha1NUIiSj"}],"key":"yTF5NsMpu7"},{"type":"footer","children":[{"type":"paragraph","position":{"start":{"line":30,"column":1},"end":{"line":30,"column":1}},"children":[{"type":"link","url":"/backwards-design","children":[{"type":"text","value":"Explore","key":"X1ygassqsV"}],"urlSource":"data_science_skills/backwards_design","dataUrl":"/backwards-design.json","internal":true,"protocol":"file","key":"iRusKq8ZyP"}],"key":"ZxN0WY5Jfh"}],"key":"ygNni5O2ft"}],"key":"bXICyiW5x1"}],"key":"RbfZmidgma"},{"type":"thematicBreak","position":{"start":{"line":35,"column":1},"end":{"line":35,"column":1}},"key":"RUNVAboQRT"},{"type":"paragraph","position":{"start":{"line":37,"column":1},"end":{"line":37,"column":1}},"children":[{"type":"emphasis","position":{"start":{"line":37,"column":1},"end":{"line":37,"column":1}},"children":[{"type":"text","value":"Questions or suggestions? Reach out to ","position":{"start":{"line":37,"column":1},"end":{"line":37,"column":1}},"key":"be36yBMn58"},{"type":"link","url":"mailto:nick@nickeubank.com","position":{"start":{"line":37,"column":1},"end":{"line":37,"column":1}},"children":[{"type":"text","value":"nick@nickeubank.com","position":{"start":{"line":37,"column":1},"end":{"line":37,"column":1}},"key":"uQV5ZHI95w"}],"urlSource":"mailto:nick@nickeubank.com","key":"lwQn4y34YT"},{"type":"text","value":" or open an issue on ","position":{"start":{"line":37,"column":1},"end":{"line":37,"column":1}},"key":"QZ51Ay7t2s"},{"type":"link","url":"https://github.com/MIDS-at-Duke/dukemids","position":{"start":{"line":37,"column":1},"end":{"line":37,"column":1}},"children":[{"type":"text","value":"GitHub","position":{"start":{"line":37,"column":1},"end":{"line":37,"column":1}},"key":"TD8NY2FUcN"}],"urlSource":"https://github.com/MIDS-at-Duke/dukemids","error":true,"key":"QxWIXKxeTm"},{"type":"text","value":".","position":{"start":{"line":37,"column":1},"end":{"line":37,"column":1}},"key":"XOwzbo52uz"}],"key":"JPKmbCxhX9"}],"key":"fGnZVTmHQt"}],"key":"jb4zjWNmml"}],"key":"TlKgdgs1NN"},"references":{"cite":{"order":[],"data":{}}},"footer":{"navigation":{"next":{"title":"So You’re Thinking About a PhD","short_title":"Thinking about a PhD?","url":"/phd-advice","group":"Professional Advice"}}},"domain":"http://localhost:3011"},"project":{"title":"Duke MIDS","github":"https://github.com/MIDS-at-Duke/dukemids","id":"c0b4453f-ea97-49b9-b476-0a1324bb2eef","toc":[{"file":"index.md"},{"children":[{"file":"professional_advice/PhD_Advice.ipynb","title":"Thinking about a PhD?"},{"file":"professional_advice/getting_involved_in_research.ipynb","title":"Thinking about Research?"},{"file":"professional_advice/mids_electives.md","title":"MIDS Electives"},{"file":"professional_advice/public_oriented_data_science.md"},{"file":"professional_advice/ergonomics_and_adaptive_tech.md"},{"file":"professional_advice/buying_datascience_computer.ipynb"}],"title":"Professional Advice"},{"children":[{"file":"data_science_skills/backwards_design.ipynb"},{"file":"data_science_skills/data_science_memos.md"},{"file":"data_science_skills/llms.ipynb"},{"file":"data_science_skills/using_llms_well.ipynb"},{"file":"data_science_skills/dcc.md"}],"title":"Data Science Skills"}],"exports":[],"bibliography":[],"index":"index","pages":[{"level":1,"title":"Professional Advice"},{"slug":"phd-advice","title":"So You’re Thinking About a PhD","short_title":"Thinking about a PhD?","description":"","date":"","thumbnail":"","thumbnailOptimized":"","banner":"","bannerOptimized":"","tags":[],"level":2},{"slug":"getting-involved-in-research","title":"So You Want To Get Involved In Research?","short_title":"Thinking about Research?","description":"","date":"","thumbnail":"","thumbnailOptimized":"","banner":"","bannerOptimized":"","tags":[],"level":2},{"slug":"mids-electives","title":"MIDS Elective Suggestions","short_title":"MIDS Electives","description":"","date":"","thumbnail":"","thumbnailOptimized":"","banner":"","bannerOptimized":"","tags":[],"level":2},{"slug":"public-oriented-data-science","title":"Public-Interest Data Science Jobs","description":"","date":"","thumbnail":"","thumbnailOptimized":"","banner":"","bannerOptimized":"","tags":[],"level":2},{"slug":"ergonomics-and-adaptive-tech","title":"Ergonomics and Disability Accommodations for Programming","description":"","date":"","thumbnail":"","thumbnailOptimized":"","banner":"","bannerOptimized":"","tags":[],"level":2},{"slug":"buying-datascience-computer","title":"Advice on Buying Computers for Data Science Students","description":"","date":"","thumbnail":"","thumbnailOptimized":"","banner":"","bannerOptimized":"","tags":[],"level":2},{"level":1,"title":"Data Science Skills"},{"slug":"backwards-design","title":"Backwards Design","description":"","date":"","thumbnail":"","thumbnailOptimized":"","banner":"","bannerOptimized":"","tags":[],"level":2},{"slug":"data-science-memos","title":"Data Science Memos","description":"","date":"","thumbnail":"","thumbnailOptimized":"","banner":"","bannerOptimized":"","tags":[],"level":2},{"slug":"llms","title":"chatGPT and You","description":"","date":"","thumbnail":"","thumbnailOptimized":"","banner":"","bannerOptimized":"","tags":[],"level":2},{"slug":"using-llms-well","title":"Using LLMs Well","description":"","date":"","thumbnail":"/build/copilot_chat_window-90d9d55ca13baa8ad3fe2a68151eac0e.png","thumbnailOptimized":"","banner":"","bannerOptimized":"","tags":[],"level":2},{"slug":"dcc","title":"DCC stuff","description":"","date":"","thumbnail":"","thumbnailOptimized":"","banner":"","bannerOptimized":"","tags":[],"level":2}]}}},"actionData":null,"errors":null},"future":{"unstable_dev":false,"unstable_postcss":false,"unstable_tailwind":false,"v2_errorBoundary":true,"v2_headers":true,"v2_meta":true,"v2_normalizeFormMethod":true,"v2_routeConvention":true}};</script><script type="module" async="">import "/build/manifest-45CD0E76.js";
-import * as route0 from "/build/root-RXQ7EK42.js";
-import * as route1 from "/build/routes/_index-4AIAQW4G.js";
-window.__remixRouteModules = {"root":route0,"routes/_index":route1};
 
-import("/build/entry.client-PCJPW7TK.js");</script></body></html>
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Duke MIDS Student Resources &#8212; Duke MIDS</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
+    <link rel="icon" href="_static/mids_logo.svg"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="So You’re Thinking About a PhD" href="professional_advice/PhD_Advice.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="#">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/mids_logo.svg" class="logo__image only-light" alt="Duke MIDS - Home"/>
+    <img src="_static/mids_logo.svg" class="logo__image only-dark pst-js-only" alt="Duke MIDS - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1 current active">
+                <a class="reference internal" href="#">
+                    Duke MIDS Student Resources
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Navigating Duke</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="professional_advice/PhD_Advice.html">Thinking about a PhD?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="professional_advice/getting_involved_in_research.html">Thinking about Research?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="professional_advice/mids_electives.html">MIDS Electives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_science_skills/dcc.html">Duke DCC</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">MIDS Deliverables</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="data_science_skills/backwards_design.html">Backwards Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_science_skills/data_science_memos.html">Data Science Memos</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Professional Advice</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="professional_advice/public_oriented_data_science.html">Public Interest DS Jobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="professional_advice/buying_datascience_computer.html">Buying a DS Computer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="professional_advice/ergonomics_and_adaptive_tech.html">Ergonomics &amp; Accessibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_science_skills/llms.html">chatGPT and You</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_science_skills/using_llms_well.html">Using LLMs Well</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/MIDS-at-Duke/dukemids" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/index.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Duke MIDS Student Resources</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="duke-mids-student-resources">
+<h1>Duke MIDS Student Resources<a class="headerlink" href="#duke-mids-student-resources" title="Link to this heading">#</a></h1>
+<div class="important admonition">
+<p class="admonition-title">This site is intended for current Duke MIDS students.</p>
+<p>If you are a prospective student or are looking for general information about the Duke Master in Interdisciplinary Data Science program, please visit <strong><a class="reference external" href="https://datascience.duke.edu">datascience.duke.edu</a></strong>.</p>
+</div>
+<hr class="docutils" />
+<p>Data science is an applied field, but graduate programs often focus on methods and theory while leaving students to discover on their own the practical skills, professional habits, and career wisdom that make a real difference. This site collects that hard-won knowledge in one place.</p>
+<hr class="docutils" />
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-4 sd-g-xs-4 sd-g-sm-4 sd-g-md-4 sd-g-lg-4 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Professional Advice</div>
+<p class="sd-card-text">Career guidance, the PhD path, research opportunities, elective recommendations, and practical tips for taking care of yourself along the way.</p>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text"><a class="reference internal" href="professional_advice/PhD_Advice.html"><span class="doc">Explore</span></a></p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Data Science Skills</div>
+<p class="sd-card-text">Practical skills for working data scientists: how to design a project, communicate findings, work effectively with LLMs, and use Duke’s computing resources.</p>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text"><a class="reference internal" href="data_science_skills/backwards_design.html"><span class="doc">Explore</span></a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<p><em>Questions or suggestions? Reach out to <a class="reference external" href="mailto:nick&#37;&#52;&#48;nickeubank&#46;com">nick<span>&#64;</span>nickeubank<span>&#46;</span>com</a> or open an issue on <a class="reference external" href="https://github.com/MIDS-at-Duke/dukemids">GitHub</a>.</em></p>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="right-next"
+       href="professional_advice/PhD_Advice.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">So You’re Thinking About a PhD</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -4,5 +4,4 @@ channels:
   - defaults
 dependencies:
   - python=3.13
-  - jupyter-book>=2
-  - myst-parser
+  - jupyter-book<2

@@ -15,8 +15,8 @@ parts:
     chapters:
       - file: data_science_skills/backwards_design
       - file: data_science_skills/data_science_memos
-      - file: data_science_skills/workflow_management
-      - file: data_science_skills/writing_good_notebooks
+      - file: data_science_skills/workflow
+      - file: data_science_skills/writing_good_jupyter_notebooks
         title: Good Jupyter Notebooks
   - caption: Professional Advice
     chapters:

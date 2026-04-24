@@ -3,20 +3,21 @@ root: index
 parts:
   - caption: Navigating Duke
     chapters:
+      - file: professional_advice/mids_electives
+        title: MIDS Electives
       - file: professional_advice/PhD_Advice
         title: Thinking about a PhD?
       - file: professional_advice/getting_involved_in_research
         title: Thinking about Research?
-      - file: professional_advice/mids_electives
-        title: MIDS Electives
       - file: data_science_skills/dcc
         title: Duke DCC
-
   - caption: MIDS Deliverables
     chapters:
       - file: data_science_skills/backwards_design
       - file: data_science_skills/data_science_memos
-
+      - file: data_science_skills/workflow_management
+      - file: data_science_skills/writing_good_notebooks
+        title: Good Jupyter Notebooks
   - caption: Professional Advice
     chapters:
       - file: professional_advice/public_oriented_data_science

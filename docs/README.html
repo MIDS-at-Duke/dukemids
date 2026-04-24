@@ -171,9 +171,9 @@
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Navigating Duke</span></p>
 <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="professional_advice/mids_electives.html">MIDS Electives</a></li>
 <li class="toctree-l1"><a class="reference internal" href="professional_advice/PhD_Advice.html">Thinking about a PhD?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="professional_advice/getting_involved_in_research.html">Thinking about Research?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="professional_advice/mids_electives.html">MIDS Electives</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data_science_skills/dcc.html">Duke DCC</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">MIDS Deliverables</span></p>
@@ -350,7 +350,7 @@
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup">Setup</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-the-site">Building the site</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#serving-locally-for-debugging">Serving locally for debugging</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#syntax">Syntax</a></li>
 </ul>
             </nav>
         </div>
@@ -365,7 +365,7 @@
   <section class="tex2jax_ignore mathjax_ignore" id="duke-mids">
 <h1>Duke MIDS<a class="headerlink" href="#duke-mids" title="Link to this heading">#</a></h1>
 <p>Source for <a class="reference external" href="https://dukemids.com">dukemids.com</a> — a collection of resources for Duke MIDS students.</p>
-<p>Built with <a class="reference external" href="https://mystmd.org">MyST Markdown</a> / Jupyter Book 2 and served via GitHub Pages from the <code class="docutils literal notranslate"><span class="pre">docs/</span></code> folder.</p>
+<p>Note this is based on <strong>Jupyter-Book 1</strong>, not Jupyter-Book 2.x. I keep finding features I want but can’t find in 2.x, so figure I’ll stick to 1 for a while longer.</p>
 <section id="setup">
 <h2>Setup<a class="headerlink" href="#setup" title="Link to this heading">#</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>env<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>environment.yml
@@ -374,19 +374,24 @@
 </section>
 <section id="building-the-site">
 <h2>Building the site<a class="headerlink" href="#building-the-site" title="Link to this heading">#</a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>dukemids
-jupyter-book<span class="w"> </span>build<span class="w"> </span>--html
-cp<span class="w"> </span>-R<span class="w"> </span>_build/html/*<span class="w"> </span>docs/
-</pre></div>
-</div>
-<p>Full one-liner with push:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book<span class="w"> </span>build<span class="w"> </span>--html<span class="p">;</span><span class="w"> </span>cp<span class="w"> </span>-R<span class="w"> </span>_build/html/*<span class="w"> </span>docs<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>.<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>push
+<ul class="simple">
+<li><p>set <code class="docutils literal notranslate"><span class="pre">cd</span></code> to this repo</p></li>
+<li><p>run <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">build</span> <span class="pre">.</span></code> By default only changed pages. Use <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">build</span> <span class="pre">--all</span> <span class="pre">.</span></code> to force full build.</p></li>
+<li><p>Copy into docs (where github pages looks): <code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">-R</span> <span class="pre">_build/html/*</span> <span class="pre">docs</span></code></p></li>
+<li><p>Push to github and it’ll update online shortly!</p></li>
+<li><p>You can also open <code class="docutils literal notranslate"><span class="pre">_build/index.html</span></code> (just double click!) and it’ll open in your browser locally.</p></li>
+</ul>
+<p>For copy-paste ease:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book<span class="w"> </span>build<span class="w"> </span>--all<span class="w"> </span>.<span class="p">;</span><span class="w"> </span>cp<span class="w"> </span>-R<span class="w"> </span>_build/html/*<span class="w"> </span>docs<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>.<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>push
 </pre></div>
 </div>
 </section>
-<section id="serving-locally-for-debugging">
-<h2>Serving locally for debugging<a class="headerlink" href="#serving-locally-for-debugging" title="Link to this heading">#</a></h2>
-<p>You can run it locally with <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">start</span></code></p>
+<section id="syntax">
+<h2>Syntax<a class="headerlink" href="#syntax" title="Link to this heading">#</a></h2>
+<p>Jupyter books basically use Markdown + some extra features for things like note boxes, or danger boxes, etc.
+<a class="reference external" href="https://jupyterbook.org/en/stable/reference/cheatsheet.html">Cheatsheet here</a></p>
+<p>Here’s footnotes: <a class="reference external" href="https://jupyterbook.org/en/stable/content/content-blocks.html#footnotes">https://jupyterbook.org/en/stable/content/content-blocks.html#footnotes</a>
+Notes and warnings: <a class="reference external" href="https://jupyterbook.org/en/stable/content/content-blocks.html#notes-warnings-and-other-admonitions">https://jupyterbook.org/en/stable/content/content-blocks.html#notes-warnings-and-other-admonitions</a></p>
 </section>
 </section>
 
@@ -440,7 +445,7 @@ cp<span class="w"> </span>-R<span class="w"> </span>_build/html/*<span class="w"
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup">Setup</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-the-site">Building the site</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#serving-locally-for-debugging">Serving locally for debugging</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#syntax">Syntax</a></li>
 </ul>
   </nav></div>
 

@@ -13,21 +13,28 @@ Data science is an applied field, but graduate programs often focus on methods a
 
 ---
 
-::::{grid} 1 2 2 2
+::::{grid} 1 2 3 3
 :gutter: 4
 
-:::{grid-item-card} Professional Advice
-Career guidance, the PhD path, research opportunities, elective recommendations, and practical tips for taking care of yourself along the way.
+:::{grid-item-card} Navigating Duke
+Elective recommendations, the PhD path, research opportunities, and making the most of Duke's computing resources.
 
 +++
-{doc}`Explore <professional_advice/PhD_Advice>`
+{doc}`Explore <professional_advice/mids_electives>`
 :::
 
-:::{grid-item-card} Data Science Skills
-Practical skills for working data scientists: how to design a project, communicate findings, work effectively with LLMs, and use Duke's computing resources.
+:::{grid-item-card} MIDS Deliverables
+How to design a project, communicate findings through memos, manage workflows, and write effective notebooks.
 
 +++
 {doc}`Explore <data_science_skills/backwards_design>`
+:::
+
+:::{grid-item-card} Professional Advice
+Career guidance, public interest data science, buying a DS computer, and ergonomics for long-term wellbeing.
+
++++
+{doc}`Explore <professional_advice/public_oriented_data_science>`
 :::
 
 ::::

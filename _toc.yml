@@ -3,13 +3,13 @@ root: index
 parts:
   - caption: Navigating Duke
     chapters:
-      - file: professional_advice/mids_electives
+      - file: navigating_duke/mids_electives
         title: MIDS Electives
-      - file: professional_advice/PhD_Advice
+      - file: navigating_duke/PhD_Advice
         title: Thinking about a PhD?
-      - file: professional_advice/getting_involved_in_research
+      - file: navigating_duke/getting_involved_in_research
         title: Thinking about Research?
-      - file: data_science_skills/dcc
+      - file: navigating_duke/dcc
         title: Duke DCC
   - caption: MIDS Deliverables
     chapters:

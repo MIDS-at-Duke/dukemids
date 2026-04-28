@@ -20,7 +20,7 @@ Data science is an applied field, but graduate programs often focus on methods a
 Elective recommendations, the PhD path, research opportunities, and making the most of Duke's computing resources.
 
 +++
-{doc}`Explore <professional_advice/mids_electives>`
+{doc}`Explore <navigating_duke/mids_electives>`
 :::
 
 :::{grid-item-card} MIDS Deliverables

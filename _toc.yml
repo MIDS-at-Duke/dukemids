@@ -18,6 +18,10 @@ parts:
       - file: data_science_skills/workflow
       - file: data_science_skills/writing_good_jupyter_notebooks
         title: Good Jupyter Notebooks
+  - caption: Data Science in Practice
+    chapters:
+      - file: data_science_in_practice/giving_feedback
+        title: Giving Effective Feedback
   - caption: Professional Advice
     chapters:
       - file: professional_advice/public_oriented_data_science

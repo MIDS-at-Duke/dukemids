@@ -104,6 +104,19 @@ Similarly, just because you did Step 1 before Step 2 before Step 3 doesn't mean 
 
 A closely related habit is to allocate space in your DSM in proportion to how you spent your time. As data scientists, we spend *lots* of our lives cleaning data and trying things that don't pan out. There is a very natural tendency to talk about these things in your DSM. Suppress that urge. Unless they explicitly say otherwise, your stakeholders don't want to check your work (and in many cases, may not have the expertise required to do so — that's why they hired you after all!). Discussion of details
 
+### Limitations
+
+There is a tendency for students to use a "Limitations" sections to either:
+
+- distance themselves from any problems that *might* exist in the project with a *giant* limitations section (i.e., cover their butts), or
+- try to show off their stats 101 knowledge by enumerating *every possible way* in which the model may not be perfect.
+
+That's ok in the classroom (I guess), but it's not useful in the real world.
+
+The point of a Limitations section isn't to demonstrate your ability to identify imperfections in the study; **the point of a limitation section is to give your stakeholder a sense of how much confidence they should have in the results presented in the report *from your professional perspective.***
+
+Just because you had to make an assumption does not mean that the assumption constitutes a "limitation" of the study unless you have reason to think that the assumption is unlikely to be true (or is sufficiently untrue as to impact the results). Please only include things in your limitation section that you think really are *substantive* limitations that you think your stakeholder should consider! List too many and all you're doing is telling your stakeholder you don't stand behind your work (and if you don't, why would they?).
+
 ### Not Communicating Uncertainty
 
 There is almost never a situation in which you should present results without an indication of the level of uncertainty around those results. For example, there's almost never a situation in which you should make a line plot where average values for a variable at different time-steps are connected by straight lines without standard errors:
@@ -123,12 +136,6 @@ While there is some merit in the transparency that comes with plotting average v
 So help your reader by presenting your results with a basic smoother — a linear regression or lowess and standard errors. You can overlay the raw average values for each time step as shown below — it's a good way to be transparent — but help the reader make sense of the variation in the data.
 
 ![lowess with raw averages and standard errors](images/lowess_w_se.png)
-
-### Limitations
-
-There is a tendency for students to use a "Limitations" sections to, well... just try and cover their butts by throwing out anything they can think of about the paper that is imperfect. That's ok in the classroom, but it's not useful in the real world.
-
-The point of a Limitations section isn't to demonstrate your ability to identify any imperfections in the study; the point of a limitation section is to give your stakeholder a sense of how much confidence they should have in the results presented in the report *from your professional perspective.* Just because you had to make an assumption does not mean that the assumption constitutes a "limitation" of the study unless you have reason to think that the assumption is unlikely to be true (or is sufficiently untrue as to impact the results). Please only include things in your limitation section that you think really are substantive limitations!
 
 ## MIDS-Specific Expectations
 

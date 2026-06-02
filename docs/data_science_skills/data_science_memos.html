@@ -196,13 +196,10 @@
 <li class="toctree-l1"><a class="reference internal" href="workflow.html">Workflow Management</a></li>
 <li class="toctree-l1"><a class="reference internal" href="writing_good_jupyter_notebooks.html">Good Jupyter Notebooks</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Science in Practice</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../data_science_in_practice/giving_feedback.html">Giving Effective Feedback</a></li>
-</ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Professional Advice</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../professional_advice/public_oriented_data_science.html">Public Interest DS Jobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../professional_advice/giving_feedback.html">Giving Effective Feedback</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../professional_advice/buying_datascience_computer.html">Buying a DS Computer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../professional_advice/ergonomics_and_adaptive_tech.html">Ergonomics &amp; Accessibility</a></li>
 <li class="toctree-l1"><a class="reference internal" href="llms.html">chatGPT and You</a></li>
@@ -383,9 +380,9 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-mistakes-in-student-writing">Common Mistakes in Student Writing</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-you-spent-your-time-what-you-should-write-about">How You Spent Your Time != What You Should Write About</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#limitations">Limitations</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#not-communicating-uncertainty">Not Communicating Uncertainty</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#not-modelling-the-data">Not Modelling The Data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#limitations">Limitations</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mids-specific-expectations">MIDS-Specific Expectations</a><ul class="nav section-nav flex-column">
@@ -484,6 +481,17 @@ document.write(`
 <p>Similarly, just because you did Step 1 before Step 2 before Step 3 doesn’t mean “explain 1, then 2, then 3” is the best way to <em>communicate</em> what you want to communicate. Indeed, oftentimes as we work, we zero in on what is most important, which means the thing we do <em>last</em> is actually what you may want to put <em>first</em> in your writing.</p>
 <p>A closely related habit is to allocate space in your DSM in proportion to how you spent your time. As data scientists, we spend <em>lots</em> of our lives cleaning data and trying things that don’t pan out. There is a very natural tendency to talk about these things in your DSM. Suppress that urge. Unless they explicitly say otherwise, your stakeholders don’t want to check your work (and in many cases, may not have the expertise required to do so — that’s why they hired you after all!). Discussion of details</p>
 </section>
+<section id="limitations">
+<h3>Limitations<a class="headerlink" href="#limitations" title="Link to this heading">#</a></h3>
+<p>There is a tendency for students to use a “Limitations” sections to either:</p>
+<ul class="simple">
+<li><p>distance themselves from any problems that <em>might</em> exist in the project with a <em>giant</em> limitations section (i.e., cover their butts), or</p></li>
+<li><p>try to show off their stats 101 knowledge by enumerating <em>every possible way</em> in which the model may not be perfect.</p></li>
+</ul>
+<p>That’s ok in the classroom (I guess), but it’s not useful in the real world.</p>
+<p>The point of a Limitations section isn’t to demonstrate your ability to identify imperfections in the study; <strong>the point of a limitation section is to give your stakeholder a sense of how much confidence they should have in the results presented in the report <em>from your professional perspective.</em></strong></p>
+<p>Just because you had to make an assumption does not mean that the assumption constitutes a “limitation” of the study unless you have reason to think that the assumption is unlikely to be true (or is sufficiently untrue as to impact the results). Please only include things in your limitation section that you think really are <em>substantive</em> limitations that you think your stakeholder should consider! List too many and all you’re doing is telling your stakeholder you don’t stand behind your work (and if you don’t, why would they?).</p>
+</section>
 <section id="not-communicating-uncertainty">
 <h3>Not Communicating Uncertainty<a class="headerlink" href="#not-communicating-uncertainty" title="Link to this heading">#</a></h3>
 <p>There is almost never a situation in which you should present results without an indication of the level of uncertainty around those results. For example, there’s almost never a situation in which you should make a line plot where average values for a variable at different time-steps are connected by straight lines without standard errors:</p>
@@ -497,11 +505,6 @@ document.write(`
 <p>While there is some merit in the transparency that comes with plotting average values of a variable at different time steps and connecting them with straight lines, it’s almost never the right choice. People are really bad at interpreting raw data — they just aren’t good at figuring out how to “smooth” natural fluctuations (especially if you don’t provide confidence intervals!).</p>
 <p>So help your reader by presenting your results with a basic smoother — a linear regression or lowess and standard errors. You can overlay the raw average values for each time step as shown below — it’s a good way to be transparent — but help the reader make sense of the variation in the data.</p>
 <p><img alt="lowess with raw averages and standard errors" src="../_images/lowess_w_se.png" /></p>
-</section>
-<section id="limitations">
-<h3>Limitations<a class="headerlink" href="#limitations" title="Link to this heading">#</a></h3>
-<p>There is a tendency for students to use a “Limitations” sections to, well… just try and cover their butts by throwing out anything they can think of about the paper that is imperfect. That’s ok in the classroom, but it’s not useful in the real world.</p>
-<p>The point of a Limitations section isn’t to demonstrate your ability to identify any imperfections in the study; the point of a limitation section is to give your stakeholder a sense of how much confidence they should have in the results presented in the report <em>from your professional perspective.</em> Just because you had to make an assumption does not mean that the assumption constitutes a “limitation” of the study unless you have reason to think that the assumption is unlikely to be true (or is sufficiently untrue as to impact the results). Please only include things in your limitation section that you think really are substantive limitations!</p>
 </section>
 </section>
 <section id="mids-specific-expectations">
@@ -646,9 +649,9 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-mistakes-in-student-writing">Common Mistakes in Student Writing</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-you-spent-your-time-what-you-should-write-about">How You Spent Your Time != What You Should Write About</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#limitations">Limitations</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#not-communicating-uncertainty">Not Communicating Uncertainty</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#not-modelling-the-data">Not Modelling The Data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#limitations">Limitations</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mids-specific-expectations">MIDS-Specific Expectations</a><ul class="nav section-nav flex-column">

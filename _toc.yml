@@ -5,6 +5,8 @@ parts:
     chapters:
       - file: navigating_duke/mids_electives
         title: MIDS Electives
+      - file: navigating_duke/duke_internship_opportunities
+        title: Internships through Duke
       - file: navigating_duke/PhD_Advice
         title: Thinking about a PhD?
       - file: navigating_duke/getting_involved_in_research

@@ -34,6 +34,7 @@ One disclaimer: this list is meant to help students explore this space; these ar
 
 ### International Entities (including both US and International Operations)
 
+- [UNJobs.org](https://unjobs.org/) Compiles job posting for the UN and other international organizations. You can filter for things like [Data Science](https://unjobs.org/themes/data-science) theme, but again beware of mis-labeling.
 - [Abt Global](https://www.abtglobal.com/) — (See description above.) Active in 36+ countries with projects spanning public health, climate, education, and social services.
 - [Acumen](https://acumen.org/) — A nonprofit impact investor that uses "patient capital" to invest in businesses serving low-income communities in the developing world, with a focus on areas like agriculture, energy, education, and health.
 - [Food and Agriculture Organization (FAO)](https://www.fao.org/home/en) — A United Nations agency that leads international efforts to defeat hunger, improve nutrition, and promote sustainable agriculture worldwide.

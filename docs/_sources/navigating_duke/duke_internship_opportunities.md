@@ -1,10 +1,28 @@
 # Duke Internship Opportunities
 
-## Data+, Climate+, Code+, etc
+## [Data+ and Climate+](https://bigdata.duke.edu/participate/data-plus/)
+
+Data+ (and Climate+, which is under the Data+ umbrella) are research experiences that welcomes undergraduate and masters students interested in exploring new data-driven approaches to interdisciplinary challenges. It is suitable for students from all class years and from all majors. Students join small project teams (at most 3 undergrads and 1 master’s student per team), working alongside other teams in a communal environment. They learn how to marshal, analyze, and visualize data, while gaining broad exposure to the modern world of data science.
+
+The projects come from an extremely diverse set of subject areas. It is our hope that students will be able to both work deeply into their specific project and get a very broad picture of most of the skills needed for modern data science.
 
 ### Participant
 
-### Project Director
+Every year, many MIDS students join Data+ or Climate+ projects to fulfill their internship requirement. These projects provide great opportunities to work with a faculty member or external stakeholder on a real research project. Project participants also receive a summer stipend!
+
+**For full consideration, apply by the end of February!**
+
+### Project Manager
+
+In addition to working on a Data+ (or other plus-program) project as a team member, many MIDS students also option to apply for jobs as [Data+ Project Managers](https://bigdata.duke.edu/participate/data-plus/data-project-managers/).
+
+Data+ Project Managers are Duke grad students and post docs from a wide variety of disciplines, who liaise between the Data+ project client and the Data+ project team of undergraduate students. Project Managers help to translate client expectations to students, and to translate team challenges to the client. Project Managers also provide expertise from their disciplines to project teams.
+
+In return for their contributions to the Data+ program, most Project Managers are eligible for a $2,500 payment, or in the case of their being a Duke employee, they can receive a professional development reimbursement grant that can be used for conference travel, educational materials, texts, and more that will be transferred to their fund code.
+
+## Other "Plus" Programs
+
+Inspired by Data+ and Climate+, a number of departments around Duke have also spun up their own Plus-Programs, including [Code+](https://codeplus.duke.edu/), [Math+](https://math.duke.edu/mathplus), [Ethics+](https://scienceandsociety.duke.edu/learn/applied-ethics-plus/), and at this rate probably a few more by the time you read this! :) Be sure to check them out too!
 
 ## [Energy Internship Program (Duke Funds for non-Duke Internships)](https://nicholasinstitute.duke.edu/energy-internship-program)
 

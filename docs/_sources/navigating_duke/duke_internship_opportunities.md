@@ -6,13 +6,9 @@ Data+ (and Climate+, which is under the Data+ umbrella) are research experiences
 
 The projects come from an extremely diverse set of subject areas. It is our hope that students will be able to both work deeply into their specific project and get a very broad picture of most of the skills needed for modern data science.
 
-### Participant
-
-Every year, many MIDS students join Data+ or Climate+ projects to fulfill their internship requirement. These projects provide great opportunities to work with a faculty member or external stakeholder on a real research project. Project participants also receive a summer stipend!
-
 **For full consideration, apply by the end of February!**
 
-### Project Manager
+### Data+/Climate+ Project Manager
 
 In addition to working on a Data+ (or other plus-program) project as a team member, many MIDS students also option to apply for jobs as [Data+ Project Managers](https://bigdata.duke.edu/participate/data-plus/data-project-managers/).
 

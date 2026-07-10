@@ -30,5 +30,6 @@ parts:
         title: Buying a DS Computer
       - file: professional_advice/ergonomics_and_adaptive_tech
         title: Ergonomics & Accessibility
+      - file: data_science_skills/principles_of_effective_ai_use
       - file: data_science_skills/llms
       - file: data_science_skills/using_llms_well

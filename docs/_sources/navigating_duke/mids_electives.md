@@ -24,6 +24,14 @@ One approach many students take is to make elective choices based on the stage o
 - **Mid-Career:** take electives that either build general data science skills (deep learning, applied programming, business) or give them a chance to try a specific domain of interest (e.g., bioengineering)/
 - **Late in MIDS:** take electives in whatever specialized technique you've found you really care about, or in a relatively specific area of application (especially if you have a job offer or know what you'll be doing after graduation!).
 
+## Graduate Certificates
+
+Another thing to consider with electives is pursuing a [Graduate Certificate](https://graduateschool.bulletins.duke.edu/policies/academic/certificates). A Graduate Certificate is a set of classes and sometimes seminars which, if completed, result in you getting a formal "certificate" added to your transcript. A few Graduate Certificates of particular interest to MIDS students include:
+
+- [Information Science and Engineering for the Public Sector](https://iseps.igec.duke.edu/)
+- [Geospatial Analysis Certificate](https://nicholas.duke.edu/academics/certificate-programs/geospatial-analysis-certificate-program)
+- [Innovation & Entrepreneurship Certificate](https://entrepreneurship.duke.edu/courses-certificates/graduate-professional-certificate/)
+
 ## Most Popular Electives
 
 The following is a list of the most popular electives taken by MIDS students from 2020-2022 (based on number of students who have taken each class, ordered by past enrollment):

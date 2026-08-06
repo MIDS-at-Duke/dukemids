@@ -24,17 +24,17 @@ One approach many students take is to make elective choices based on the stage o
 - **Mid-Career:** take electives that either build general data science skills (deep learning, applied programming, business) or give them a chance to try a specific domain of interest (e.g., bioengineering)/
 - **Late in MIDS:** take electives in whatever specialized technique you've found you really care about, or in a relatively specific area of application (especially if you have a job offer or know what you'll be doing after graduation!).
 
-### Graduate Certificates
+### Elective Timing & Tuition
+
+Many MIDS students try to take their electives earlier in their time at Duke to allow them to enroll part-time in their final semester to save on tuition. Students who enroll part-time in their last semester pay about $4,000 per credit rather than pay full tuition (about $35,000). Because a student who has met all of their elective requirements before their last semester is only required to take the Capstone seminar (3 credits) and Data Dialogues (1/2 credit) in their last semester, with careful planning one could pay as little as $14,000 in tuition in that last semester.
+
+## Graduate Certificates
 
 Another thing to consider with electives is pursuing a [Graduate Certificate](https://graduateschool.bulletins.duke.edu/policies/academic/certificates). A Graduate Certificate is a set of classes and sometimes seminars which, if completed, result in you getting a formal "certificate" added to your transcript. A few Graduate Certificates of particular interest to MIDS students include:
 
 - [Information Science and Engineering for the Public Sector](https://iseps.igec.duke.edu/)
 - [Geospatial Analysis Certificate](https://nicholas.duke.edu/academics/certificate-programs/geospatial-analysis-certificate-program)
 - [Innovation & Entrepreneurship Certificate](https://entrepreneurship.duke.edu/courses-certificates/graduate-professional-certificate/)
-
-### Elective Timing & Tuition
-
-Many MIDS students try to take their electives earlier in their time at Duke to allow them to enroll part-time in their final semester to save on tuition. Students who enroll part-time in their last semester pay about $4,000 per credit rather than pay full tuition (about $35,000). Because a student who has met all of their elective requirements before their last semester is only required to take the Capstone seminar (3 credits) and Data Dialogues (1/2 credit) in their last semester, with careful planning one could pay as little as $14,000 in tuition in that last semester.
 
 ## Most Popular Electives
 

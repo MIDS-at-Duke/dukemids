@@ -60,9 +60,12 @@ While there are some US government jobs (especially federal jobs) that require c
 
 (If you're unfamiliar: the US is a federal system, meaning there's no "US government job" system, or even such thing as "the" US government. Cities and states have their own governments that post their own jobs and hire their own employees!)
 
+For example, here are a few North Carolina resources:
+
 - [North Carolina State Job Portal](https://nc.wd108.myworkdayjobs.com/NC_Careers)
 - [North Carolina Local Government Jobs](https://oshr.nc.gov/work-nc/local-government-job-search)
 - [Durham City Jobs](https://www.governmentjobs.com/careers/durhamnc)
+- [City of Raleigh Jobs](https://raleighnc.gov/careers-jobs-and-volunteering/services/careers-and-jobs)
 
 ### Universities
 

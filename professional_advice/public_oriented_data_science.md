@@ -54,6 +54,16 @@ One disclaimer: this list is meant to help students explore this space; these ar
 - [Cedars Sinai](https://careers.cshs.org/choose-your-area-of-interest-information-technology) — A major nonprofit academic medical center in Los Angeles with a growing data science and AI research program, hiring analysts and engineers to work on clinical informatics, genomics, and health outcomes research.
 - [Cleveland Clinic](https://jobs.clevelandclinic.org/job-search-results/?category%5B%5D=Research%20and%20Data) — A top-ranked nonprofit academic medical center in Ohio with a robust research enterprise, employing data scientists and analysts to work on clinical trials, population health analytics, and AI-driven diagnostic and treatment tools.
 
+### Government Jobs
+
+While there are some US government jobs (especially federal jobs) that require citizenship or security clearances, there are also lots of state and local government jobs that do not. These definitely don't pay as well as most of the options suggested above, but if you have the luxury of not needing a high salary or are mostly interested in ensuring you're able to get a job that allows you to stay in the US for OPT, you should definitely consider looking into them.
+
+(If you're unfamiliar: the US is a federal system, meaning there's no "US government job" system, or even such thing as "the" US government. Cities and states have their own governments that post their own jobs and hire their own employees!)
+
+- [North Carolina State Job Portal](https://nc.wd108.myworkdayjobs.com/NC_Careers)
+- [North Carolina Local Government Jobs](https://oshr.nc.gov/work-nc/local-government-job-search)
+- [Durham City Jobs](https://www.governmentjobs.com/careers/durhamnc)
+
 ### Universities
 
 We aren't going to list all the Universities in the US — you know them! — but they are almost all H1B cap-exempt employers, so definitely check them out for jobs!

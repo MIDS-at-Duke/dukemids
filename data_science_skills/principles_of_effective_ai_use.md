@@ -1,5 +1,15 @@
 # MIDS Principles of Effective LLM Use
 
+In an effort to guide students in the effective use of LLMs/AI, the following is a set of principles that the MIDS faculty think are good principles to bear in mind during use of these new tools.
+
+## Use in Education
+
+It bears being explicit that the use of AI in an educational environment entails different considerations than the use of AI in a production or business environment. As discussed with MIDS students during their first week at Duke, the path to learning to be able to do things that AI *cannot* do involves learning to do many of the things that AI *can* do on your own. Overuse of AI risks subverting this learning process.
+
+With that in mind, it's important to be mindful of what you are seeking to learn in a given activity, and to differentiate between elements of a task **that are incidental to your learning goals** (like front-end web design for a project website) and what's **intrinsic to your learning goals** (like thinking about how you're designing the model you plan to fit).
+
+## Use in General
+
 1. Always validate.  
 2. Remain skeptical.  
 3. **Practice reflective experimentation.** These tools are constantly changing, and our understanding of “best practices” is evolving. So experiment\! But do so thoughtfully.  
